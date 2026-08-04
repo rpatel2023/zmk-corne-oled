@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  QWERTY:
+  QWERTY HRM:
   - $$mdi:keyboard-tab$$
   - Q
   - W
@@ -15,19 +15,19 @@ layers:
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&td0'
-  - A
-  - S
-  - D
-  - F
+  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
   - H
-  - J
-  - K
-  - L
-  - {t: ;, s: ':'}
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: RIGHT GUI, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
   - Z
@@ -43,61 +43,61 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - {t: EXTEND, h: toggle}
-  - {t: NUMBERS, h: toggle}
+  - {t: '$$mdi:keyboard-esc$$', h: NAVIGATION}
+  - {t: '$$mdi:apple-keyboard-command$$', h: NUMBERS}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: SYMBOLS, h: toggle}
-  - {t: FUNCTION, h: toggle}
-  EXTEND:
+  - {t: '$$mdi:backspace$$', h: SYMBOLS}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: FUNCTION}
+  NAVIGATION:
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-esc$$
-  - Alt+$$mdi:arrow-left-bold$$
-  - Ctl+F
-  - Alt+$$mdi:arrow-right-bold$$
-  - INS
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - PG UP
-  - HOME
+  - Ctl+Y
+  - Ctl+V
+  - Ctl+C
+  - Ctl+X
+  - Ctl+Z
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: QWERTY HRM, h: toggle}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
-  - END
+  - $$mdi:arrow-right-bold$$
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: LGUI, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: QWERTY, h: toggle}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - PG DN
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+Z
-  - Ctl+X
-  - Ctl+C
-  - LGUI
-  - Ctl+V
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-tab$$
-  - CMENU
-  - $$mdi:printer-outline$$
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - INS
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: QWERTY, h: toggle}
-  - {t: NUMBERS, h: toggle}
+  - {t: QWERTY HRM, h: toggle}
+  - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: SYMBOLS, h: toggle}
-  - {t: FUNCTION, h: toggle}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:backspace-reverse-outline$$
   NUMBERS:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -119,7 +119,7 @@ layers:
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: QWERTY, h: toggle}
+  - {t: QWERTY HRM, h: toggle}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '*'
   - {t: '4', s: $}
@@ -141,12 +141,12 @@ layers:
   - {t: '3', s: '#'}
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: EXTEND, h: toggle}
-  - {t: QWERTY, h: toggle}
+  - $$mdi:keyboard-esc$$
+  - {t: QWERTY HRM, h: toggle}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: SYMBOLS, h: toggle}
-  - {t: FUNCTION, h: toggle}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:backspace-reverse-outline$$
   SYMBOLS:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -168,7 +168,7 @@ layers:
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: QWERTY, h: toggle}
+  - {t: QWERTY HRM, h: toggle}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '*'
   - (
@@ -190,12 +190,12 @@ layers:
   - {t: ']', s: '}'}
   - _
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: EXTEND, h: toggle}
-  - {t: NUMBERS, h: toggle}
+  - $$mdi:keyboard-esc$$
+  - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: QWERTY, h: toggle}
-  - {t: FUNCTION, h: toggle}
+  - {t: QWERTY HRM, h: toggle}
+  - $$mdi:backspace-reverse-outline$$
   FUNCTION:
   - '&studio_unlock'
   - STOP
@@ -237,14 +237,14 @@ layers:
   - F1
   - F2
   - F3
-  - {t: QWERTY, h: toggle}
+  - {t: QWERTY HRM, h: toggle}
   - RGB EFF
-  - {t: EXTEND, h: toggle}
-  - {t: NUMBERS, h: toggle}
+  - $$mdi:keyboard-esc$$
+  - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: SYMBOLS, h: toggle}
-  - {t: QWERTY, h: toggle}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: QWERTY HRM, h: toggle}
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
