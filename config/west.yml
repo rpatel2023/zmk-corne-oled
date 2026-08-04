@@ -1,38 +1,37 @@
 manifest:
-  remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: mctechnology17
-      url-base: https://github.com/mctechnology17
-    - name: eyelash
-      url-base: https://github.com/a741725193
-    - name: cormoran
-      url-base: https://github.com/cormoran
   projects:
     - name: zmk
-      remote: cormoran
-      revision: v0.3-branch+dya
+      url: https://github.com/rpatel2023/zmk-corne-core
+      revision: 4493783ef88ce2e653bf8217c92ee17140df71e3
       import: app/west.yml
+
     - name: zmk-nice-oled
-      remote: mctechnology17
-      revision: main
+      url: https://github.com/rpatel2023/zmk-nice-oled
+      revision: 46f824abb2bd41f1287c5c68abd14122af6042a3
+
     - name: zmk-board-eyelash
-      remote: eyelash
-      revision: main
+      url: https://github.com/rpatel2023/zmk-board-eyelash
+      revision: 29d53043035e08113996ae44083f23d8057a444e
+
     - name: zmk-behavior-runtime-sensor-rotate
-      remote: cormoran
-      revision: main
+      url: https://github.com/rpatel2023/zmk-behavior-runtime-sensor-rotate
+      revision: a92164d9a57d00e419882f77f4d63f61cdcc184c
+
     - name: zmk-module-ble-management
-      remote: cormoran
-      revision: zmk-v0.3.0.0
+      url: https://github.com/rpatel2023/zmk-module-ble-management
+      revision: 09fb98fcb9544904e39f851ebf23b5e7068be311
+
     - name: zmk-module-battery-history
-      remote: cormoran
-      revision: main
+      url: https://github.com/rpatel2023/zmk-module-battery-history
+      revision: 307755dd2ad4d320e14de162e8e5ef018f29d929
+
     - name: zmk-module-settings-rpc
-      remote: cormoran
-      revision: main
+      url: https://github.com/rpatel2023/zmk-module-settings-rpc
+      revision: a9f868453a5ddd070733dccb8797c2687a6629a1
+
     - name: zmk-module-runtime-input-processor
-      remote: cormoran
-      revision: zmk-v0.3.0.0
+      url: https://github.com/rpatel2023/zmk-module-runtime-input-processor
+      revision: 5971adf0e2fa8295a0cb371cbd1f7d76e9c3b7b3
+
   self:
     path: config
