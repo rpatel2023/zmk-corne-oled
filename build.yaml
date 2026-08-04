@@ -4,7 +4,7 @@ include:
   - board: eyelash_nano
     shield: eyelash_corne_left nice_oled
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=y
   - board: eyelash_nano
     shield: settings_reset
  
