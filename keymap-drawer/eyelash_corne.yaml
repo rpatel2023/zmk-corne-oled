@@ -208,7 +208,7 @@ layers:
   - F7
   - F8
   - F9
-  - SLCK
+  - '&rtd0'
   - OUT USB
   - RGB TOG
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
