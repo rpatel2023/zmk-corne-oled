@@ -62,5 +62,14 @@ manifest:
       url: https://github.com/rpatel2023/zmk-module-devtool
       revision: 40b7246fd9045324aae403885c4080a2e5caea6e
 
+    # Raj's runtime tap-dance module (2026-08-07): 8 runtime-editable
+    # tap-dance slots via SECURED custom Studio RPC. Depends on
+    # zmk-feature-custom-settings (explicit pinned entry above wins
+    # over this module's transitive import).
+    - name: zmk-feature-runtime-tap-dance
+      url: https://github.com/rpatel2023/zmk-feature-runtime-tap-dance
+      revision: 2de3d2d73a5733adb30f10755bdc9a0e1330dce9
+      import: true
+
   self:
     path: config
