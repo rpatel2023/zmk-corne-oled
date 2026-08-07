@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY HRM:
-  - $$mdi:keyboard-tab$$
+  - '&td_ctl'
   - Q
   - W
   - E
@@ -47,8 +47,8 @@ layers:
   - {t: '$$mdi:apple-keyboard-command$$', h: NUMBERS}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', h: SYMBOLS}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: FUNCTION}
+  - '&td_sym'
+  - '&td_num'
   NAVIGATION:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
