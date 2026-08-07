@@ -23,7 +23,9 @@ manifest:
 
     - name: zmk-module-battery-history
       url: https://github.com/rpatel2023/zmk-module-battery-history
-      revision: 307755dd2ad4d320e14de162e8e5ef018f29d929
+      # Re-pinned to the SECURED registration fix (was UNSECURED upstream);
+      # same pin as zmk-corne-hardened.
+      revision: c6b63d17d86ed3cdcd8ecc944a4219d546e1cbfe
 
     - name: zmk-module-settings-rpc
       url: https://github.com/rpatel2023/zmk-module-settings-rpc
@@ -32,6 +34,33 @@ manifest:
     - name: zmk-module-runtime-input-processor
       url: https://github.com/rpatel2023/zmk-module-runtime-input-processor
       revision: 5971adf0e2fa8295a0cb371cbd1f7d76e9c3b7b3
+
+    # --- Ported from zmk-corne-hardened (2026-08-06): runtime combo editing
+    # --- + devtool position-select. All forks patched to SECURED; pins are
+    # --- v3.5-core compatible (same zmk-corne-core revision as this manifest).
+
+    # cormoran/zmk-feature-runtime-combo, patched to SECURED. Transitively
+    # imports zmk-feature-custom-settings below.
+    - name: zmk-feature-runtime-combo
+      url: https://github.com/rpatel2023/zmk-feature-runtime-combo
+      revision: e1b98fea9705bb38fc899eb7c969fbeaa4b2bf42
+      import: true
+
+    # Fork of cormoran/zmk-feature-custom-settings (v3.5-compat branch),
+    # patched to SECURED. Pinned BEFORE upstream's flash/RAM descriptor split,
+    # which needs Zephyr v4.1 linker features this v3.5.0 core lacks. The
+    # MAIN_STACK_SIZE fix from later upstream is replicated in
+    # eyelash_corne_left.conf instead.
+    - name: zmk-feature-custom-settings
+      url: https://github.com/rpatel2023/zmk-feature-custom-settings
+      revision: e953267296755769c82cac2a5dfbb34af050b813
+
+    # Fork of cormoran/zmk-module-devtool, patched to SECURED + two
+    # v3.5-core compatibility fixes. Provides the position event tap used by
+    # DYA Studio's select-by-key-press feature.
+    - name: zmk-module-devtool
+      url: https://github.com/rpatel2023/zmk-module-devtool
+      revision: 40b7246fd9045324aae403885c4080a2e5caea6e
 
   self:
     path: config

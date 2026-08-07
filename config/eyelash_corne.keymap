@@ -139,6 +139,37 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        // Numbers/symbols quick-switch tap-dances (hold = momentary, so a
+        // single symbol never needs the 500 ms toggle round-trip; double-tap
+        // = lock the layer for digit/symbol-heavy entry like passwords;
+        // triple-tap = escape to base from anywhere).
+        td_num: td_num {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Numbers Tap-Dance";
+            #binding-cells = <0>;
+            // Third slot is FUNCTION, not escape-to-base: this thumb is the
+            // keymap's only FUNCTION access (and FUNCTION holds
+            // &studio_unlock), so it must stay reachable. tap-tap-hold = FUN.
+            bindings = <&mo NUM>, <&tog NUM>, <&mo FUN>;
+        };
+
+        td_sym: td_sym {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Symbols Tap-Dance";
+            #binding-cells = <0>;
+            bindings = <&mo SYM>, <&tog SYM>, <&to BASE>;
+        };
+
+        // Left-outer top key: hold/chord = Ctrl, double-tap = lock NUMBERS,
+        // triple-tap = lock SYMBOLS. Leaving a locked layer: the key is
+        // transparent there, so the same double/triple tap toggles back off.
+        td_ctl: td_ctl {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Ctrl/Num/Sym Tap-Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&tog NUM>, <&tog SYM>;
+        };
+
         rsr_trans: rsr_trans {
             compatible = "zmk,behavior-runtime-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -200,10 +231,10 @@
             display-name = "QWERTY HRM";
 
             bindings = <
-&kp TAB    &kp Q                 &kp W                 &kp E                    &kp R                  &kp T                                      &kp UP                   &kp Y          &kp U                  &kp I                    &kp O                  &kp P                   &kp BSPC
+&td_ctl    &kp Q                 &kp W                 &kp E                    &kp R                  &kp T                                      &kp UP                   &kp Y          &kp U                  &kp I                    &kp O                  &kp P                   &kp BSPC
 &td0       &hml LEFT_GUI A       &hml LEFT_ALT S       &hml LEFT_CONTROL D      &hml LEFT_SHIFT F      &kp G                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp H          &hmr RIGHT_SHIFT J      &hmr RIGHT_CONTROL K    &hmr RIGHT_ALT L       &hmr RIGHT_GUI SEMI     &kp SQT
 &kp LCTRL  &kp Z                 &kp X                 &kp C                    &kp V                  &kp B        &kp SPACE                        &kp DOWN                 &kp N          &kp M                  &kp COMMA                &kp DOT                &kp FSLH                &kp ESC
-                                                       &thumb_tog NAV ESC       &thumb_tog NUM LEFT_GUI  &kp SPACE                                                                &kp ENTER      &thumb_tog SYM BSPC    &thumb_tog FUN DEL
+                                                       &thumb_tog NAV ESC       &thumb_tog NUM LEFT_GUI  &kp SPACE                                                                &kp ENTER      &td_sym                &td_num
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
