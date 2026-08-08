@@ -260,7 +260,9 @@
             display-name = "NAVIGATION";
 
             bindings = <
-&trans  &none          &none          &none             &none            &none                                  &mmv MOVE_UP                     &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans
+// pos 0 = &studio_unlock (not &trans): base pos 0 is td_ctl now, so fall-through
+// no longer reaches an unlock; every reachable layer needs its own. (2026-08-07)
+&studio_unlock  &none          &none          &none             &none            &none                                  &mmv MOVE_UP                     &kp LC(Y)  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)  &trans
 &trans  &kp LEFT_GUI   &kp LEFT_ALT   &kp LEFT_CONTROL  &kp LEFT_SHIFT   &none                     &mmv MOVE_LEFT  &to BASE  &mmv MOVE_RIGHT  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp CAPS   &trans
 &trans  &none          &none          &none             &none            &none      &mkp LCLK                      &mmv MOVE_DOWN                   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp INS    &trans
                                                  &to BASE       &kp LEFT_GUI  &kp SPACE                                                                 &kp ENTER  &kp BSPC  &kp DEL
@@ -284,7 +286,8 @@
             display-name = "NUMBERS";
 
             bindings = <
-&trans  &none       &none          &none        &none          &kp KP_NLCK                              &mmv MOVE_UP                     &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp PLUS   &trans
+// pos 0 = &studio_unlock — same unlock-reachability rule as NAVIGATION above.
+&studio_unlock  &none       &none          &none        &none          &kp KP_NLCK                              &mmv MOVE_UP                     &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp PLUS   &trans
 &trans  &sk LALT    &sk LGUI       &sk LSHFT    &sk LCTRL      &sk RALT                    &mmv MOVE_LEFT  &to BASE  &mmv MOVE_RIGHT  &kp ASTRK  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
 &trans  &none       &kp K_CMENU    &kp INS      &kp BSPC       &kp ENTER      &mkp LCLK                    &mmv MOVE_DOWN                   &kp N0     &kp N1  &kp N2  &kp N3  &kp FSLH   &trans
                                            &kp ESC         &to BASE       &kp SPACE                                                               &kp ENTER  &kp BSPC  &kp DEL
