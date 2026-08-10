@@ -68,7 +68,7 @@ manifest:
     # over this module's transitive import).
     - name: zmk-feature-runtime-tap-dance
       url: https://github.com/rpatel2023/zmk-feature-runtime-tap-dance
-      revision: 2de3d2d73a5733adb30f10755bdc9a0e1330dce9
+      revision: ecd65d98131cf6a3accaabce590e333d40db9809
       import: true
 
   self:
